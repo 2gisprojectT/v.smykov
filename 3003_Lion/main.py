@@ -18,12 +18,13 @@ if __name__ == "__main__":
         ("дерево", "сытый"): ("Лев вздремул под деревом. Проголодался.", "голодный")
     }
 
-    Lion = Lion(state_table)
+    def_state="голодный"
+    Lion = Lion(state_table, def_state)
 
     print("Лев " + Lion.state + ".")
-    print("Введите объект (охоник, антилопа, дерево). \n")
 
     while True:
+        print("Введите объект (охоник, антилопа, дерево).")
         subject = input().lower()
         if subject == "exit":
             break
